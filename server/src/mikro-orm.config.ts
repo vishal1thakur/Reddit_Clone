@@ -3,15 +3,13 @@ import { Post } from "./entities/Post";
 import { MikroORM } from "@mikro-orm/core";
 import path from "path";
 
-// The types wont match if it is exported without the Parameters<>, which is specifying the types. It returns an Array, in which case to need to specify the first entry of that []
-
 export default {
   migrations: {
     path: path.join(__dirname, "./migrations"), // path to the folder with migrations
     pattern: /^[\w-]+\d+\.[tj]s$/, // regex pattern for the migration files
   },
   entities: [Post],
-  dbName: "lireddit",
+  dbName: "redditclone",
   type: "postgresql",
   debug: !__prod__,
 } as Parameters<typeof MikroORM.init>[0];

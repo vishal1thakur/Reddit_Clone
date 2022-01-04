@@ -12,7 +12,7 @@ exports.default = {
         pattern: /^[\w-]+\d+\.[tj]s$/,
     },
     entities: [Post_1.Post],
-    dbName: "lireddit",
+    dbName: "redditclone",
     type: "postgresql",
     debug: !constants_1.__prod__,
 };
